@@ -9,7 +9,12 @@ public class Main {
 //        calcularArea();
 
         // hacer una funcion que genere un password
-        generarPassword();
+//        generarPassword();
+
+        // promedio de 5 numeros
+        int[] numeros = new int [10];
+        promedio(numeros);
+
     }
 
     private static void calcularArea (){
@@ -27,5 +32,22 @@ public class Main {
     double password = Math.random()*1000000;
 //    String newPassword =
     out.println("Su nueva password: "+ Math.round(password));
+    }
+
+
+
+    private static void promedio(int [] numeros){
+        int suma = 0;
+        for (int i = 0; i <= numeros.length; i++){
+            suma += pedirNumero();
+        };
+        out.println("El promedio es de: "+suma/numeros.length);
+    }
+
+    private static int pedirNumero(){
+        Scanner teclado = new Scanner(in);
+        out.print("Ingrese un numero: ");
+        int numeroINput = teclado.nextInt();
+        return numeroINput;
     }
 }
