@@ -1,2 +1,11 @@
-package PACKAGE_NAME;public class Figura {
+public class Figura {
+    private String coloFondo;
+
+    public String getColoFondo() {
+        return coloFondo;
+    }
+
+    public void setColoFondo(String coloFondo) {
+        this.coloFondo = coloFondo;
+    }
 }

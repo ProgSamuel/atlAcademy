@@ -1,15 +1,33 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Circulo circulo1 = new Circulo();
-        circulo1.setRadio(7);
-        double areaTotal1 = circulo1.calcularArea();
+        crearFigura();
+    }
 
-        Circulo circulo2 = new Circulo();
-        circulo2.setRadio(7);
-        areaTotal1 += circulo2.calcularArea();
+    private static void crearFigura() {
+        System.out.println("Que figura desea crear?");
+        System.out.println("1) Circulo");
+        System.out.println("2) Cuadrado");
+        System.out.println("3) Triangulo");
 
-        System.out.println("Circulo 1, area: " + circulo1.calcularArea());
-        System.out.println("Circulo 1, area: " + circulo2.calcularArea());
-        System.out.println("la sumatoria de areas es: "+ areaTotal1);
+        Scanner teclado = new Scanner(System. in);
+        int respuestaUsuario = teclado.nextInt();
+        if (respuestaUsuario ==1){
+            Circulo circulo = new Circulo();
+            circulo.cargarDatos();
+            System.out.println("EL area total es: " + circulo.calcularArea());
+        }
+
+        if (respuestaUsuario == 2){
+            Cuadrado cuadrado = new Cuadrado();
+            cuadrado.cargarDatos();
+            System.out.println("EL area total es: " + cuadrado.calcularArea());
+        }
+        if (respuestaUsuario == 3) {
+            Triangulo triangulo = new Triangulo();
+            triangulo.cargarDatos();
+            System.out.println("EL area total es: " + triangulo.calcularArea());
+        }
     }
 }

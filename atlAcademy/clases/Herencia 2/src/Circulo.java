@@ -1,14 +1,7 @@
-public class Circulo {
-    private String colorFondo;
+import java.util.Scanner;
+
+public class Circulo extends Figura {
     private float radio;
-
-    public String getColorFondo() {
-        return colorFondo;
-    }
-
-    public void setColorFondo(String colorFondo) {
-        this.colorFondo = colorFondo;
-    }
 
     public float getRadio() {
         return radio;
@@ -22,5 +15,12 @@ public class Circulo {
     public double calcularArea() {
         double area = Math.PI * (radio * radio);
         return area;
+    }
+    Scanner teclado = new Scanner(System.in);
+
+    public void cargarDatos() {
+        System.out.println("Ingresa el radio en cm:");
+       radio = teclado.nextFloat();
+
     }
 }
