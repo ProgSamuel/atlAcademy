@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PoligonoRegular {
+public abstract class PoligonoRegular extends Figura {
     protected  double base;
     protected double altura;
 
@@ -26,6 +26,8 @@ public class PoligonoRegular {
         double altura = teclado.nextDouble();
         System.out.println("Ingresa la base en cm:");
         double base = teclado.nextDouble();
-
     }
+
+    public abstract double calcularArea();
+
 }

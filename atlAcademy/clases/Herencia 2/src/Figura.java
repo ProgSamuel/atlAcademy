@@ -1,4 +1,4 @@
-public class Figura {
+public abstract class  Figura {
     private String coloFondo;
 
     public String getColoFondo() {
@@ -8,4 +8,6 @@ public class Figura {
     public void setColoFondo(String coloFondo) {
         this.coloFondo = coloFondo;
     }
+
+    public abstract double calcularArea();
 }
